@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vadimcn.vscode-lldb",
+    "ms-vscode.cmake-tools",
+    "cheshirekow.cmake-format",
+    "josetr.cmake-language-support-vscode",
+    "xaver.clang-format",
+    "donjayamanne.githistory"
+  ]
+}

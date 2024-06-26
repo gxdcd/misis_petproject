@@ -1,0 +1,229 @@
+{
+    // https://github.com/microsoft/vscode/issues/94778
+    // https://stackoverflow.com/questions/61387585/vs-code-disable-undo-command-after-file-was-closed
+    "files.restoreUndoStack": false,
+    "cmake.configureArgs": [
+        // VCPKG_CMAKE_TOOLCHAIN_FILE should point
+        // to ${your-vcpkg-root-dir}/scripts/buildsystems/vcpkg.cmake"
+        "-DCMAKE_TOOLCHAIN_FILE=${env:VCPKG_CMAKE_TOOLCHAIN_FILE}"
+    ],
+    "cmake.cmakeCommunicationMode": "fileApi",
+    "cmake.generator": "Ninja",
+    "cmake.debugConfig": {
+        "console": "integratedTerminal",
+    },
+    "editor.stickyScroll.enabled": false,
+    // "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "explorer.autoReveal": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ixx": "${capture}.*.ixx, ${capture}.*.cxx, ${capture}.*.h, ${capture}.*.hpp, ${capture}.*.hxx, ${capture}.*.cpp ${capture}.cxx, ${capture}.h, ${capture}.hpp, ${capture}.hxx, ${capture}.cpp",
+    },
+    "files.exclude": {
+        ///
+        /// Файлы VS Code
+        ///
+        ".vscode": true,
+        ".vs": true,
+        "out": true,
+        ///
+        /// CMake / CMake Tools
+        ///
+        // "app/main/CMakeLists.txt": true,
+        // "app/model/CMakeLists.txt": true,
+        // "app/utilities/CMakeLists.txt": true,
+        // "app/view/CMakeLists.txt": true,
+        // "app/views/CMakeLists.txt": true,
+        // "app/widgets/CMakeLists.txt": true,
+        // "app/CMakeLists.txt": true,
+        ///
+        // "app/main/*.[!t]*": true,
+        // "app/model/CMakeLists.[!t]*": true,
+        // "app/utilities/*.[!t]*": true,
+        // "app/view/*.[!t]*": true,
+        // "app/views/*.[!t]*": true,
+        // "app/widgets/*.[!t]*": true,
+        // "app/*.[!t]*": true,
+        ///
+        //
+        // "**/CMakeLists.txt": true,
+        // "CMakeLists.txt": true,
+        "CMakeSettings.json": true,
+        "vcpkg.json": true,
+        //
+        /// Графика
+        ///
+        "*.png": true,
+        //
+        /// Разное
+        ///
+        ".clang-format": true,
+        "LICENSE": true,
+        "README.md": true,
+        ///
+        /// Файлы настройки Git
+        ///
+        ".gitignore": true,
+        ".gitmodules": true,
+        ///
+        /// Файлы в папке исходников
+        ///
+        // "cmake": true,
+        // "app/assets": true,
+        // "app/libs": true,
+        // "app/main.cpp": true,
+        ///
+        /// Файлы в целевой папке build
+        ///
+        "build": true,
+        "build/[!b]*": true,
+        "build/b[!i]*": true,
+        "build/bi[!n]*": true,
+        "build/*/*.ilk": true,
+        "build/*/*.pdb": true,
+        ///
+        /// Build artifacts
+        ///
+        "**/*.ilk": true,
+        "**/*.pdb": true,
+    },
+    "vsicons.associations.folders": [
+        // https://github.com/vscode-icons/vscode-icons/wiki/FineTuning
+        // https://github.com/vscode-icons/vscode-icons/blob/master/src/iconsManifest/supportedFolders.ts
+        {
+            "icon": "windows",
+            "extensions": [
+                "executables",
+                "executable",
+                "exe"
+            ]
+        },
+        {
+            "icon": "library",
+            "extensions": [
+                "libs",
+                "deps",
+                "extern",
+                "static libs",
+                "object libs"
+            ]
+        },
+    ],
+    "files.associations": {
+        "*.json5": "jsonc",
+        "algorithm": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "condition_variable": "cpp",
+        "csignal": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "deque": "cpp",
+        "exception": "cpp",
+        "filesystem": "cpp",
+        "format": "cpp",
+        "forward_list": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp",
+        "limits": "cpp",
+        "list": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "ratio": "cpp",
+        "source_location": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "stop_token": "cpp",
+        "streambuf": "cpp",
+        "string": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "unordered_map": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "vector": "cpp",
+        "xfacet": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocbuf": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp",
+        "span": "cpp",
+        "iostream": "cpp",
+        "expected": "cpp",
+        "any": "cpp",
+        "map": "cpp",
+        "numeric": "cpp",
+        "ranges": "cpp",
+        "valarray": "cpp",
+        "xtree": "cpp",
+        "codecvt": "cpp",
+        "set": "cpp",
+        "strstream": "cpp",
+        "regex": "cpp",
+        "semaphore": "cpp",
+        "cstdarg": "cpp",
+        "stack": "cpp",
+        "queue": "cpp",
+        "execution": "cpp",
+        "unordered_set": "cpp",
+        "random": "cpp",
+        "barrier": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "complex": "cpp",
+        "coroutine": "cpp",
+        "csetjmp": "cpp",
+        "cuchar": "cpp",
+        "cwctype": "cpp",
+        "future": "cpp",
+        "latch": "cpp",
+        "mdspan": "cpp",
+        "memory_resource": "cpp",
+        "numbers": "cpp",
+        "print": "cpp",
+        "scoped_allocator": "cpp",
+        "shared_mutex": "cpp",
+        "spanstream": "cpp",
+        "stacktrace": "cpp",
+        "stdfloat": "cpp",
+        "syncstream": "cpp",
+        "typeindex": "cpp"
+    }
+}

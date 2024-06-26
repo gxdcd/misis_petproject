@@ -1,0 +1,15 @@
+{
+    // https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+    // https://github.com/microsoft/vscode-cpptools-api/blob/main/api.ts
+    "configurations": [
+        {
+            "name": "Win32",
+            "cppStandard": "c++23",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "compilerArgs": [
+                "/std:c++latest"
+            ]
+        }
+    ],
+    "version": 4
+}
